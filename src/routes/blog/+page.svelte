@@ -3,29 +3,34 @@
     const uniqueCategories = [...new Set(data.posts.map(post => post.meta.categories).flat())];
 </script>
 
+<head>
+    <title>Blog</title>
+</head>
+
 <h1>Blog</h1>
 
-<ul>
+
+<div class="columns-3 m-2 justify-center">
     {#each data.posts as post}
-        <li>
-            <h2>
-                <span class="flex flex-row">
-                    <a href={post.path} class="w-1/5 m-3">
-                        <img src={post.meta.picture} alt={post.meta.title} class="rounded-xl border-4 border-solid border-ternary" />
+            <span class="flex flex-col">
+                <div class="bg-secondary/80 my-2 flex flex-col">
+                    <a href={post.path} class="m-3">
+                        <img src={post.meta.picture} alt={post.meta.title} class="w-48 h-32 rounded-xl border-2 border-solid border-ternary" />
                     </a>
                     <span>
                         <a href="{post.path}">
                             {post.meta.title}
                         </a>
-                        <br />
+                        <br/>
                         Published on {post.meta.date}
                     </span>
-                </span>
-            </h2>
-            
-        </li>
+                </div>
+            </span>
     {/each}
-</ul>
+</div>
+
+
+<hr class="border-1 border-black w-full mx-auto">
 
 <h2>Categories</h2>
 

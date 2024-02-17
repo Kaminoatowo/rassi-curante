@@ -22,7 +22,7 @@
     <hr class="border-1 border-primary-dark w-full mx-auto my-2">
     
     <div class="flex flex-row">
-        <img src="{picture}" alt="{title}" width="50%"/>
+        <img src="{picture}" alt="{title}" class="w-48 h-32"/>
         <div class="px-4">
             <h1 class="my-5">{title}</h1>
             <p>Published: {date}</p>
