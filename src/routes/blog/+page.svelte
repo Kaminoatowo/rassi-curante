@@ -39,8 +39,6 @@
     </span>
 </div>
 
-
-
 <hr class="border-1 border-black w-full mx-auto">
 
 <h2>Categories</h2>
