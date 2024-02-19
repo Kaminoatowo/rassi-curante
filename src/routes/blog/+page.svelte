@@ -43,3 +43,5 @@
         </li>
     {/each}
 </ul>
+
+<a href="/admin/write" class="btn">New post</a>
