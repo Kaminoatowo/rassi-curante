@@ -27,7 +27,18 @@
                 </div>
             </span>
     {/each}
+    <span class="flex flex-col">
+        <div class="bg-secondary/80 my-2 flex flex-col">
+                <a href="/admin/write" class="m-3 flex justify-center">
+                    <img src="../src/lib/img/plus.png" alt="New post" class="w-32 h-32 rounded-xl border-2 border-solid border-ternary p-2" />
+                </a>
+            <span class="mx-auto">
+                <a href="/admin/write">New post</a>
+            </span>
+        </div>
+    </span>
 </div>
+
 
 
 <hr class="border-1 border-black w-full mx-auto">
@@ -43,5 +54,3 @@
         </li>
     {/each}
 </ul>
-
-<a href="/admin/write" class="btn">New post</a>
