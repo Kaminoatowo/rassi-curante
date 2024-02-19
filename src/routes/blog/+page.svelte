@@ -14,10 +14,10 @@
     {#each data.posts as post}
             <span class="flex flex-col">
                 <div class="bg-secondary/80 my-2 flex flex-col">
-                    <a href={post.path} class="m-3">
+                    <a href={post.path} class="m-3 flex justify-center">
                         <img src={post.meta.picture} alt={post.meta.title} class="w-48 h-32 rounded-xl border-2 border-solid border-ternary" />
                     </a>
-                    <span>
+                    <span class="mx-auto">
                         <a href="{post.path}">
                             {post.meta.title}
                         </a>
