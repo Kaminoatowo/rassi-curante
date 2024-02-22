@@ -19,21 +19,34 @@
     
     <FormComponentSimple label="title" type="text" classString="flex justify-center"/>
 
-    <FormComponentSimple label="date" type="date"/>
+    <div class="flex justify-between">
+        <FormComponentSimple label="date" type="date"/>
 
-    <FormComponentSimple label="picture" type="file"/>
-    
-    <label for="categories">Categories:</label>
-    <select id="categories" bind:value={categories} required class="text-black rounded-xl border-2 border-solid border-ternary">
-        {#each uniqueCategories as cat}
-            <option value="{cat}">{cat}</option>
-        {/each}
-    </select><hr class="border-0 my-2">
+        <div>
+            <label for="categories">Categories</label>
+            <select id="categories" bind:value={categories} required class="text-black rounded-xl border-2 border-solid border-ternary">
+                {#each uniqueCategories as cat}
+                    <option value="{cat}">{cat}</option>
+                {/each}
+            </select><hr class="border-0 my-2">
+        </div>
+        
+    </div>
 
-    <label for="content">Content:</label>
-    <textarea id="content" required class="text-black rounded-xl border-2 border-solid border-ternary"></textarea><hr class="border-0 my-2">
+    <div class="flex justify-between">
+        <FormComponentSimple label="picture" type="file" inputClass="hidden" labelClass="p-1 rounded-xl border-2 border-solid"/>
+        
+        
+        <label for="content">Content</label>
+        <textarea id="content" required class="text-black rounded-xl border-2 border-solid border-ternary"></textarea>
+        <hr class="border-0 my-2">    
+        
 
-    <button type="submit">Submit</button>
+    </div>
+    <hr class="border-0 my-2">
+    <div class="flex justify-center">
+        <button type="submit" class="text-black rounded-xl border-2 border-solid border-ternary bg-white">Submit</button>
+    </div>
 </form>
 
 <style>
